@@ -22,7 +22,7 @@ class XimalayaPipeline(object):
     def process_item(self, item, spider):
         audio = requests.get(item['media_url'], headers=self.headers)
         # with open(self.IMAGES_STORE, 'wb') as f:
-        audio_path = self.IMAGES_STORE + '/' + str(item['name']) + '.mp4'
+        audio_path = self.IMAGES_STORE + '/' + str(item['name']) + '.mp3'
         # if not os.path.exists(audio_path):
         #     os.makedirs(audio_path)
         with open(audio_path, 'wb') as f:
